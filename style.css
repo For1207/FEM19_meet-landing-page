@@ -1,0 +1,241 @@
+@import url(./css-reset.css);
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;500;600;700;900&display=swap');
+
+:root {
+  --cyan: hsl(192, 37%, 48%);
+  --cyan-light: hsl(192, 90%, 77%);
+  --purple: hsl(268, 34%, 53%);
+  --purple-light: hsl(268, 100%, 86%);
+  --black: hsl(240, 22%, 20%);
+  --grey: hsl(240, 10%, 57%);
+  --grey-0_25: hsla(240, 10%, 57%, 0.25);
+  --white: hsl(0, 0%, 98%);
+
+  --mar-3: 3rem;
+  --mar-2: 2rem;
+  --mar-1_5: 1.5rem;
+  --mar-1: 1rem;
+
+  --pad-1: 1rem;
+  --pad-1_5: 1.5rem;
+  --pad-3: 3rem;
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  text-align: center;
+  color: var(--grey);
+  font-weight: 500;
+  line-height: 1.625rem;
+
+    /* For the project purposes. Place the project in the middle of the screen */
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+.prj-cont {
+  max-width: 1440px;
+  min-width: 375px;
+  overflow: hidden;
+}
+
+
+.logo,
+.img-hero-left,
+.group-chat,
+.main-text h3 {
+  margin-top: var(--mar-3);
+}
+
+.download-btn,
+.main-text p {
+  margin-top: var(--mar-2);
+}
+
+
+.group-chat__text,
+.main-text h2,
+footer p {
+  margin-top: var(--mar-1_5);
+}
+
+.what-is-it-btn {
+  margin-top: var(--mar-1);
+}
+
+.group-chat__header {
+  padding-left: var(--pad-3);
+  padding-right: var(--pad-3);
+}
+
+
+.group-chat__text,
+.main-text h2,
+.main-text p,
+footer p {
+  padding-left: var(--pad-1_5);
+  padding-right: var(--pad-1_5);
+
+}
+
+.logo {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.img-hero-left {
+  content: url(assets/tablet/image-hero.png);
+}
+
+img.img-hero-left {
+  max-width: 110%;
+  margin-left: -5%;
+}
+
+.img-hero-right {
+  display: none;
+}
+
+
+.what-is-it-btn{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.group-chat__header {
+  font-size: clamp(2.5rem, 4.444vw, 4rem);
+  line-height: 2.75rem;
+  font-weight: 900;
+  color: var(--black);
+}
+
+button {
+  color: var(--white);
+  font-weight: 900;
+  line-height: 1.625rem;
+}
+
+.download-btn {
+  width: 12.0625rem;
+  height: 3.625rem;
+  background-color: var(--cyan);
+  border: none;
+  border-radius: 1.8125rem;
+}
+
+.what-is-it-btn {
+  width: 8.6875rem;
+  height: 3.625rem;
+  border: none;
+  border-radius: 1.8125rem;
+}
+
+.purple {
+  background-color: var(--purple);
+}
+
+.cyan {
+  color: var(--cyan-light)
+}
+
+.light-purple {
+  color: var(--purple-light);
+}
+
+.step {
+  margin-top: 4rem;
+}
+
+.step__line {
+  height: 5.25rem;
+  border-right: 1px solid var(--grey-0_25);
+  margin-left: auto;
+  margin-right: auto;
+  width: 0;
+}
+
+.step__num {
+  font-weight: 900;
+  padding: var(--pad-1);
+  border: 1px solid var(--grey-0_25);
+  width: 3.5rem;
+  height: 3.5rem;
+  margin: 0 auto;
+  border-radius: 1.8125rem;
+}
+
+.main-images {
+  margin-top: 4rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.main-images img {
+  width: 10rem;
+  border-radius: 0.75rem;
+}
+
+.main-text h3 {
+  text-transform: uppercase;
+  font-weight: 900;
+  line-height: 1.625rem;
+  letter-spacing: 0.25rem;
+  color: var(--cyan);
+}
+
+.main-text h2 {
+  color: var(--black);
+  font-weight: 900;
+  font-size: 2rem;
+  line-height: 2.25rem;
+}
+
+.step__line.second {
+  margin-top: 2.25rem;
+}
+
+.step__line.second, .step__num.second {
+  position: relative;
+  top: 1.75rem;
+  background-color: #fff;
+}
+
+footer {
+  background-color: var(--cyan);
+  color: var(--white);
+  background-image: url(./assets/desktop/image-footer.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: soft-light;
+  background-position: center;
+}
+
+footer h2 {
+  padding-top: 5.75rem;
+  font-size: 2rem;
+  font-weight: 900;
+  line-height: 2.25rem;
+}
+
+.purple {
+  margin-bottom: 4.5rem;
+}
+
+button:hover,
+button:active {
+  cursor: pointer;
+}
+
+.download-btn:hover,
+.download-btn:active {
+  background-color: hsla(192, 54%, 64%, 1);
+}
+
+.purple:hover,
+.purple:active {
+  background-color: hsla(267, 54%, 71%, 1);
+}
