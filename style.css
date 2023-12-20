@@ -27,16 +27,14 @@ body {
   color: var(--grey);
   font-weight: 500;
   line-height: 1.625rem;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1440px;
+  min-width: 375px;
 
-    /* For the project purposes. Place the project in the middle of the screen */
-  display: grid;
-  place-items: center;
-  min-height: 100vh;
 }
 
 .prj-cont {
-  max-width: 1440px;
-  min-width: 375px;
   overflow: hidden;
 }
 
@@ -48,31 +46,17 @@ body {
   margin-top: var(--mar-3);
 }
 
-.download-btn,
+.group-chat__btn,
 .main-text p {
   margin-top: var(--mar-2);
 }
 
 
 .group-chat__text,
-.main-text h2,
-footer p {
+.main-text h2 {
   margin-top: var(--mar-1_5);
 }
 
-.what-is-it-btn {
-  margin-top: var(--mar-1);
-}
-
-.group-chat__header {
-  padding-left: var(--pad-3);
-  padding-right: var(--pad-3);
-}
-
-
-.group-chat__text,
-.main-text h2,
-.main-text p,
 footer p {
   padding-left: var(--pad-1_5);
   padding-right: var(--pad-1_5);
@@ -97,19 +81,31 @@ img.img-hero-left {
   display: none;
 }
 
-
-.what-is-it-btn{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .group-chat__header {
   font-size: clamp(2.5rem, 4.444vw, 4rem);
   line-height: 2.75rem;
   font-weight: 900;
   color: var(--black);
+  width: clamp(18rem, 45.443vw, 27.8125rem);
+  font-size: clamp(2.5rem, 6.25vw, 3rem);
+  margin-left: auto;
+  margin-right: auto;
 }
+
+.group-chat__text {
+  width: clamp(20.4375rem, 59.505vw, 28.5625rem);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.group-chat__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+
 
 button {
   color: var(--white);
@@ -190,8 +186,17 @@ button {
 .main-text h2 {
   color: var(--black);
   font-weight: 900;
-  font-size: 2rem;
+  font-size: clamp(2rem, 5.208vw, 2.5rem);
+  width: clamp(20.4375rem, 58.333vw, 27.8125rem);
   line-height: 2.25rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main-text p {
+  width: clamp(20.4375rem, 75vw, 36rem);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .step__line.second {
@@ -212,17 +217,23 @@ footer {
   background-repeat: no-repeat;
   background-blend-mode: soft-light;
   background-position: center;
+  padding: 5.75rem 1.5rem 4.5rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
 }
 
 footer h2 {
-  padding-top: 5.75rem;
-  font-size: 2rem;
   font-weight: 900;
   line-height: 2.25rem;
+  font-size: clamp(2rem, 5.208vw, 2.5rem);
+  width: clamp(20.4375rem, 60.417vw, 28.5625rem);
 }
 
-.purple {
-  margin-bottom: 4.5rem;
+footer p {
+  width: clamp(28.5625rem, 75vw, 35.8125rem);
 }
 
 button:hover,
@@ -238,4 +249,97 @@ button:active {
 .purple:hover,
 .purple:active {
   background-color: hsla(267, 54%, 71%, 1);
+}
+
+/* Desktop styles */
+@media screen and (min-width:1440px) {
+  
+  /* Layout */
+  .prj-cont {
+    width: 1440px;
+  }
+
+  .img-hero-right {
+    display: block;
+  }
+
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .img-hero-left {
+    content: url(./assets/desktop/image-hero-left.png);
+  }
+
+  .img-hero-left, .img-hero-right {
+    width: 25%;
+  }
+
+  .group-chat {
+    width: 40%;
+  }
+
+  img.img-hero-right {
+    max-width: 110%;
+    margin-right: -2%;
+  }
+
+  img.img-hero-left {
+    margin-left: -2%;
+  }
+
+  .group-chat__btn {
+    flex-direction: row;
+  }
+
+  .main-images {
+    gap: 2rem;
+  }
+  .main-images img {
+    width: 17rem;
+  }
+  
+  footer {
+    flex-direction: row;
+    gap: 5rem;
+    justify-content: center;
+  }
+
+  /* Margin, padding, size and width */
+  .logo {
+    margin-top: 5rem;
+  }
+
+  .group-chat__header {
+    font-size: 4rem;
+    line-height: 4rem;
+  }
+
+  .group-chat__text {
+    font-size: 1.125rem;
+  }
+
+  .main-text h2 {
+    line-height: 2.75rem;
+  }
+
+  .main-text p,
+  footer p {
+    font-size: 1.125rem;
+    line-height: 1.625rem;
+    text-align: left;
+  }
+
+  footer h2 {
+    width: 21.875rem;
+    text-align: left;
+    line-height: 2.75rem;
+  }
+
+  footer p {
+    padding: 0;
+  }
+
 }
